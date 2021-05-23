@@ -6,7 +6,7 @@
                 Sorry....
             </p>
             <p class="text-sm mt-4 md:text-base leading-snug text-chemhunt-logo text-center text-opacity-100">
-                you are late registration process has been stopped see you next time ...
+                Currently you can't login ...
             </p>
         </div>
         <div class="text-chemhunt-logo py-5">
@@ -21,7 +21,7 @@
 
                 </div>
                 <p class="text-3xl md:text-5xl my-4 text-center text-chemhunt-logo leading-relaxed md:leading-snug">
-                    <span>Registration has been stopped!</span>
+                    <span>Login has been stopped!</span>
                 </p>
             </div>
         </div>

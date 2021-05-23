@@ -17,7 +17,13 @@ class AuthenticatedSessionController extends Controller
      */
     public function create()
     {
-        return view('auth.login');
+        if(config('chemhunt.login_status')===true){
+            return view('auth.login');
+        }
+        else{
+            return view('auth.login-stop');
+        }
+
     }
 
     /**
