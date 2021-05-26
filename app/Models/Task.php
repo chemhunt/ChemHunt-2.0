@@ -4,11 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 use Ramsey\Uuid\Uuid;
 
-class Riddle extends Model
+class Task extends Model
 {
-    use HasFactory;
+    Use Notifiable,HasFactory;
 
     /**
      * The primary key for the model.
@@ -25,11 +26,40 @@ class Riddle extends Model
     protected $keyType = 'string';
 
     /**
+     * The "type" of the primary key ID.
+     *
+     * @var string
+     */
+    protected $table = 'tasks';
+
+    /**
      * Indicates if the IDs are auto-incrementing.
      *
      * @var bool
      */
     public $incrementing = false;
+
+    /**
+     * Indicates if the model exists.
+     *
+     * @var bool
+     */
+    public $exists = true;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'day_1',
+        'day_2',
+        'day_3',
+        'day_4',
+        'day_5',
+        'day_6',
+        'day_7',
+    ];
 
     /**
      * The "booting" method of the model.
@@ -41,8 +71,9 @@ class Riddle extends Model
         parent::boot();
 
         static::creating(function ($model) {
+            $uuid = Uuid::uuid4()->toString();
             if (empty($model->{$model->getKeyName()})) {
-                $model->{$model->getKeyName()} = Uuid::uuid4()->toString();
+                $model->{$model->getKeyName()} = $uuid;
             }
         });
 
@@ -65,6 +96,11 @@ class Riddle extends Model
     public function getKeyType()
     {
         return 'string';
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 
 }

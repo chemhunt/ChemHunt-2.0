@@ -2,18 +2,52 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use Ramsey\Uuid\Uuid;
 
-class
-User extends Authenticatable
+class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    Use Notifiable, HasFactory;
+
+    /**
+     * The primary key for the model.
+     *
+     * @var string
+     */
+    protected $primaryKey = 'id';
+
+    /**
+     * The "type" of the primary key ID.
+     *
+     * @var string
+     */
+    protected $keyType = 'string';
+
+    /**
+     * The "type" of the primary key ID.
+     *
+     * @var string
+     */
+    protected $table = 'users';
+
+    /**
+     * Indicates if the IDs are auto-incrementing.
+     *
+     * @var bool
+     */
+    public $incrementing = false;
+
+    /**
+     * Indicates if the model exists.
+     *
+     * @var bool
+     */
+    public $exists = true;
 
     /**
      * The attributes that are mass assignable.
@@ -36,13 +70,13 @@ User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be hidden for arrays.
+     * The attributes excluded from the model's JSON form.
      *
      * @var array
      */
     protected $hidden = [
         'password',
-        'remember_token',
+        'remember_token'
     ];
 
     /**
@@ -51,7 +85,7 @@ User extends Authenticatable
      * @var array
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        'email_verified_at'    => 'datetime',
     ];
 
     /**
@@ -68,7 +102,17 @@ User extends Authenticatable
             if (empty($model->{$model->getKeyName()})) {
                 $model->{$model->getKeyName()} = $uuid;
             };
-            $model->email =$uuid.'@chem.hunt';
+            do{
+                $id = mt_rand(100000000,999999999);
+                $email =['email'=>$id.'@chem.hunt'] ;
+                $validator = Validator::make($email, ['email' => 'unique:users',]);
+                if ($validator->fails()) {
+                    $unique = 0;
+                }else{
+                    $model->email =$email['email'];
+                    $unique = 1;
+                };
+            } while ($unique===0);
             $model->user_password = Str::random('9');
             $model->password = Hash::make($model->user_password);
         });
@@ -92,5 +136,10 @@ User extends Authenticatable
     public function getKeyType()
     {
         return 'string';
+    }
+
+    public function task()
+    {
+        return $this->hasOne(Task::class,'user_id');
     }
 }

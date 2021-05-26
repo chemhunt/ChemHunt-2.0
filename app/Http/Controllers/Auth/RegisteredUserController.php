@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Task;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
@@ -46,8 +47,8 @@ class RegisteredUserController extends Controller
             'college' => 'required|string|max:255',
             'year' => 'required|numeric|max:255',
             'state' => 'required|string|max:255',
-            'phone_number' => 'required|digits:10',
-            'phone_number_wapp' => 'required|digits:10',
+           // 'phone_number' => 'required|digits:10',
+           // 'phone_number_wapp' => 'required|digits:10',
             'user_email' => 'required|string|email|max:255|unique:users',
         ]);
 
@@ -61,6 +62,16 @@ class RegisteredUserController extends Controller
             'phone_number' => $request->phone_number,
             'phone_number_wapp' => $request->phone_number_wapp,
             'user_email' => $request->user_email,
+        ]);
+
+        $user->task()->create([
+            'day_1' => 'Pending',
+            'day_2' => 'Pending',
+            'day_3' => 'Pending',
+            'day_4' => 'Pending',
+            'day_5' => 'Pending',
+            'day_6' => 'Pending',
+            'day_7' => 'Pending',
         ]);
 
         event(new Registered($user));
