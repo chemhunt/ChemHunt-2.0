@@ -8,12 +8,11 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/chemhunt/ChemHunt-2.0@master/public/css/app.css">
 
         <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="https://cdn.jsdelivr.net/gh/chemhunt/ChemHunt-2.0@master/public/js/app.js" defer></script>
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
-
     </head>
     <body class="font-caribbean bg-blue-300">
         <div class="antialiased">

@@ -138,6 +138,14 @@ class User extends Authenticatable
         return 'string';
     }
 
+    public function answer(){
+        return $this->hasOne(Answer::class,'user_id');
+    }
+
+    public function result(){
+        return $this->hasOne(Result::class,'user_id');
+    }
+
     public function task()
     {
         return $this->hasOne(Task::class,'user_id');

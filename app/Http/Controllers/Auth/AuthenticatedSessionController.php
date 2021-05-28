@@ -34,7 +34,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request)
     {
-        $request->authenticate('web');
+        $request->authenticate();
 
         $request->session()->regenerate();
 

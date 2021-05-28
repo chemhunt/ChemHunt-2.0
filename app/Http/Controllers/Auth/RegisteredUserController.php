@@ -74,6 +74,16 @@ class RegisteredUserController extends Controller
             'day_7' => 'Pending',
         ]);
 
+        $user->answer()->create([
+            'day_1_q_1' => '',
+        ]);
+
+        $user->result()->create([
+            'day_1_r_1' => 0,
+        ]);
+
+
+
         event(new Registered($user));
 
         session()->flash('registration_name',$request->first_name.' '.$request->last_name);

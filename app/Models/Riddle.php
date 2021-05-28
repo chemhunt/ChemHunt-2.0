@@ -67,4 +67,9 @@ class Riddle extends Model
         return 'string';
     }
 
+    public function users(){
+        return $this->belongsToMany(User::class,'answers','riddle_id','user_id')
+            ->withPivot('user_answer','result','created_at');
+    }
+
 }

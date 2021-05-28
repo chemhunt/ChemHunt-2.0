@@ -24,7 +24,7 @@
                                     <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-chemhunt-light">
                                         <div class="flex-auto p-5 lg:p-10">
                                             <div class="relative w-full mb-3">
-                                                <label class="block text-chemhunt-logo text-xl font-bold mb-2" for="first_name">First Name</label>
+                                                <label class="block text-chemhunt-logo text-xl font-bold mb-2" for="first_name">First Name(Your Name)</label>
                                                 <input type="name" name="first_name" id="first_name" value="{{ old('first_name') }}" class="font-sans border-0 px-3 py-3 rounded text-xl shadow w-full bg-chemhunt-logo placeholder-black text-white outline-none focus:bg-chemhunt-dark" placeholder=" " style="transition: all 0.15s ease 0s;" required />
                                             </div>
                                             <div class="relative w-full mb-3">
@@ -32,7 +32,7 @@
                                                 <input type="name" name="middle_name" id="middle_name" value="{{ old('middle_name') }}" class="font-sans border-0 px-3 py-3 rounded text-xl shadow w-full bg-chemhunt-logo placeholder-black text-white outline-none focus:bg-chemhunt-dark" placeholder=" " style="transition: all 0.15s ease 0s;" required />
                                             </div>
                                             <div class="relative w-full mb-3">
-                                                <label class="block text-chemhunt-logo text-xl font-bold mb-2" for="last_name">Last  Name</label>
+                                                <label class="block text-chemhunt-logo text-xl font-bold mb-2" for="last_name">Last  Name(Surname)</label>
                                                 <input type="name" name="last_name" id="last_name" value="{{ old('last_name')}}" class="font-sans border-0 px-3 py-3 rounded text-xl shadow w-full bg-chemhunt-logo placeholder-black text-white outline-none focus:bg-chemhunt-dark" placeholder=" " style="transition: all 0.15s ease 0s;" required />
                                             </div>
                                         </div>
