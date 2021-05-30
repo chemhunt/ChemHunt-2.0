@@ -104,7 +104,7 @@ class User extends Authenticatable
             };
             do{
                 $id = mt_rand(100000000,999999999);
-                $email =['email'=>$id.'@chem.hunt'] ;
+                $email =['email'=>'cid-'.$id.'@chem.hunt'] ;
                 $validator = Validator::make($email, ['email' => 'unique:users',]);
                 if ($validator->fails()) {
                     $unique = 0;
