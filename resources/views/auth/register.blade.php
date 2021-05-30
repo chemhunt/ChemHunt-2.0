@@ -12,9 +12,9 @@
                 @csrf
                 <div class="container mx-auto flex flex-col md:flex-row my-6 md:my-20">
                     <div class="flex flex-col w-full lg:w-1/3 p-8">
-                        <p class="text-3xl md:text-5xl my-4 leading-relaxed md:leading-snug">Full Name</p>
+                        <p class="text-3xl md:text-5xl my-4 leading-relaxed md:leading-snug">Personal Info</p>
                         <p class="text-sm md:text-base leading-snug text-chemhunt-logo text-opacity-100">
-                            Please provide your full name ...
+                            Please provide your personal information ...
                         </p>
                     </div>
                     <div class="flex flex-col w-full lg:w-2/3 justify-center">
@@ -140,7 +140,7 @@
                                                 <input type="name" name="phone_number_wapp" id="phone_number_wapp" value="{{ old('phone_number_wapp') }}" class="font-sans border-0 px-3 py-3 rounded text-xl shadow w-full bg-chemhunt-logo placeholder-black text-white outline-none focus:bg-chemhunt-dark" placeholder=" " style="transition: all 0.15s ease 0s;" required />
                                             </div>
                                             <div class="relative w-full mb-3">
-                                                <label class="block text-chemhunt-logo text-xl font-bold mb-2" for="user_email">Email</label>
+                                                <label class="block text-chemhunt-logo text-xl font-bold mb-2" for="user_email">Email(personal)</label>
                                                 <input type="email" name="user_email" id="user_email" value="{{ old('user_email') }}" class="font-sans border-0 px-3 py-3 rounded text-xl shadow w-full bg-chemhunt-logo placeholder-black text-white outline-none focus:bg-chemhunt-dark" placeholder=" " style="transition: all 0.15s ease 0s;" required />
                                             </div>
                                         </div>
