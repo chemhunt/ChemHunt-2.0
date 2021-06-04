@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Chemhunt;
 
 use App\Http\Controllers\Controller;
 use App\Models\Riddle;
-use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -41,6 +41,7 @@ class ExamController extends Controller
             'day_'.config('chemhunt.day').'_q_2'=>$request->{'day_'.config('chemhunt.day').'_q_2'},
             'day_'.config('chemhunt.day').'_q_3'=>$request->{'day_'.config('chemhunt.day').'_q_3'},
             'day_'.config('chemhunt.day').'_q_4'=>$request->{'day_'.config('chemhunt.day').'_q_4'},
+            'day_'.config('chemhunt.day').'_time'=>Carbon::now(),
         ]);
         $user->task()->update(['hunt_day_'.config('chemhunt.day')=>'Done']);
         return redirect('/hunt');

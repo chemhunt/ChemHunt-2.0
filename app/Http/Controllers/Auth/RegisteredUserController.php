@@ -47,8 +47,8 @@ class RegisteredUserController extends Controller
             'college' => 'required|string|max:255',
             'year' => 'required|numeric|max:255',
             'state' => 'required|string|max:255',
-           // 'phone_number' => 'required|digits:10',
-           // 'phone_number_wapp' => 'required|digits:10',
+            'phone_number' => 'required|digits:10',
+            'phone_number_wapp' => 'required|digits:10',
             'user_email' => 'required|string|email|max:255|unique:users',
         ]);
 
@@ -75,14 +75,8 @@ class RegisteredUserController extends Controller
         ]);
 
         $user->answer()->create([
-            'day_1_q_1' => '',
+            'day_1_q_1' => null,
         ]);
-
-        $user->result()->create([
-            'day_1_r_1' => 0,
-        ]);
-
-
 
         event(new Registered($user));
 

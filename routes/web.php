@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
+
 Route::middleware('auth')->group( function (){
     Route::get('/dashboard',[\App\Http\Controllers\Chemhunt\DashboardController::class,'show'])->name('dashboard.index');
     Route::get('/hunt',[\App\Http\Controllers\Chemhunt\ExamController::class,'show'])->name('exam.index');

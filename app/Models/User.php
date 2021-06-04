@@ -104,7 +104,7 @@ class User extends Authenticatable
             };
             do{
                 $id = mt_rand(100000000,999999999);
-                $email =['email'=>'cid-'.$id.'@chem.hunt'] ;
+                $email =['email'=>$id.'@chemhunt2.0'] ;
                 $validator = Validator::make($email, ['email' => 'unique:users',]);
                 if ($validator->fails()) {
                     $unique = 0;
@@ -140,10 +140,6 @@ class User extends Authenticatable
 
     public function answer(){
         return $this->hasOne(Answer::class,'user_id');
-    }
-
-    public function result(){
-        return $this->hasOne(Result::class,'user_id');
     }
 
     public function task()
