@@ -46,7 +46,7 @@
                     <div class="flex flex-col w-full lg:w-1/3 p-8">
                         <p class="text-3xl md:text-5xl my-4 leading-relaxed md:leading-snug">College Info</p>
                         <p class="text-sm md:text-base leading-snug text-chemhunt-logo text-opacity-100">
-                            Please provide your college , state and year of teaching ...
+                            Please provide your college , state and year of study ...
                         </p>
                     </div>
                     <div class="flex flex-col w-full lg:w-2/3 justify-center">
