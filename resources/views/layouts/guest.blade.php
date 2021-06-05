@@ -17,6 +17,7 @@
     <body class="font-caribbean bg-blue-300">
         <div class="antialiased">
             {{ $slot }}
+            @include('layouts.footer')
             @include('layouts.toast')
             @if ($errors->any())
                 <script>setTimeout(function(){ popToast("{{ 'danger' }}",
