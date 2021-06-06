@@ -20,10 +20,11 @@ class ExamController extends Controller
             $i=1;
             do{
                 if($user->task->{'day_'.$i}==='Done'&&$i==$day) {
+
                     $riddles = Riddle::query()->where('day',$day)->orderBy('sr_no')->get();
                     return view('user.exam.index',compact('riddles'));
                 }
-                elseif($user->task->{'day_'.$i}==='Pending' || $user->task->{'hunt_day_'.$i}==='Pending' ){
+                elseif($user->task->{'day_'.$i}==='Pending' ){
                     $eliminated_day = $i;
                     return view('user.exam.eliminated',compact('eliminated_day'));
                 }

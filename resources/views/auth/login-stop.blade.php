@@ -21,7 +21,7 @@
 
                 </div>
                 <p class="text-3xl md:text-5xl my-4 text-center text-chemhunt-logo leading-relaxed md:leading-snug">
-                    <span>Login has been stopped!</span>
+                    <span>Today's hunt is finished or not started yet !</span>
                 </p>
             </div>
         </div>
