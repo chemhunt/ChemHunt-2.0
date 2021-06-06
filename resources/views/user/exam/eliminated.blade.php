@@ -22,7 +22,7 @@
                                        <span id="minutes" class="font-mono leading-none" >00</span>
                                        <div class="font-mono uppercase text-sm leading-none">Minutes</div>
                                    </div>
-                                   <div class="text-2xl mx-1 font-extralight">&</div>
+                                   <div class="text-2xl mx-1 text-chemhunt-logo font-extralight">&</div>
                                    <div class="w-24 pl-1 mx-1 p-2 bg-chemhunt-logo text-chemhunt-light rounded-lg">
                                        <span id="seconds" class="font-mono leading-none">00</span>
                                        <div class="font-mono uppercase text-sm leading-none">Seconds</div>
