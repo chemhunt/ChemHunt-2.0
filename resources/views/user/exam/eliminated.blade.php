@@ -18,12 +18,12 @@
                        <div class="flex items-center justify-center px-5 py-5" id="clock">
                            <div class="text-yellow-100">
                                <div class="text-6xl text-center flex w-full items-center justify-center">
-                                   <div class="w-24 mx-1 pr-1 p-2 bg-white text-yellow-500 rounded-lg">
+                                   <div class="w-24 mx-1 pr-1 p-2 bg-chemhunt-logo text-chemhunt-light rounded-lg">
                                        <span id="minutes" class="font-mono leading-none" >00</span>
                                        <div class="font-mono uppercase text-sm leading-none">Minutes</div>
                                    </div>
                                    <div class="text-2xl mx-1 font-extralight">&</div>
-                                   <div class="w-24 pl-1 mx-1 p-2 bg-white text-yellow-500 rounded-lg">
+                                   <div class="w-24 pl-1 mx-1 p-2 bg-chemhunt-logo text-chemhunt-light rounded-lg">
                                        <span id="seconds" class="font-mono leading-none">00</span>
                                        <div class="font-mono uppercase text-sm leading-none">Seconds</div>
                                    </div>
@@ -75,7 +75,7 @@
             var timeinterval = setInterval(updateClock, 1000);
         }
         var deadline = new Date();
-        deadline.setTime(deadline.getTime() + 20000)
+        deadline.setTime(deadline.getTime() + 120000)
         initializeClock(deadline);
     </script>
 </x-guest-layout>
