@@ -8,7 +8,7 @@
             </p>
         </div>
         <div class="text-chemhunt-logo py-5">
-            <form id="register" name="register" method="post" action="{{ route('register') }}">
+            <form class="font-sans font-bold" id="register" name="register" method="post" action="{{ route('register') }}">
                 @csrf
                 <div class="container mx-auto flex flex-col md:flex-row my-6 md:my-20">
                     <div class="flex flex-col w-full lg:w-1/3 p-8">

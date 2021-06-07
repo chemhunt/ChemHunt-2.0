@@ -3,14 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Models\Task;
+use App\Models\Admin;
 use App\Models\User;
-use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Validation\Rules;
 
 class RegisteredUserController extends Controller
 {
@@ -63,6 +59,9 @@ class RegisteredUserController extends Controller
             'phone_number_wapp' => $request->phone_number_wapp,
             'user_email' => $request->user_email,
         ]);
+
+        $admin = Admin::all()->random();
+        $user->admin()->associate($admin)->save();
 
         $user->task()->create([
             'day_1' => 'Pending',
