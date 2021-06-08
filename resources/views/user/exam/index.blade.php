@@ -1,5 +1,6 @@
 <x-guest-layout>
     <div id="hunt" class="bg-blue-300">
+        @include('layouts.chemhunt-logo')
         <div x-data="timer(new Date().setHours({{ config('chemhunt.exam_hours') }},{{ config('chemhunt.exam_minutes') }},0))" x-init="init();"  class="text-chemhunt-logo">
             <div class="container mx-auto flex flex-col md:flex-row my-4 md:my-8">
                 <div class="flex flex-col w-full mt-5">
@@ -9,7 +10,7 @@
             </div>
 
             <template id="timer" x-if="time().total>0">
-                <div class="sticky top-6 py-5 px-5" id="clock">
+                <div class="sticky top-0 py-5 px-5" id="clock">
                     <template x-if="time().total<120000">
                         <div class="text-3xl text-center flex w-full items-center justify-center">
                             <div class="animate-pulse mx-1 pr-1 p-2 bg-red-600 text-white rounded-lg">
@@ -20,12 +21,12 @@
 
                     <div class="xl:text-chemhunt-light">
                         <div class="text-6xl text-center flex w-full items-center justify-center">
-                            <div class="w-24 mx-1 pr-1 p-2 bg-chemhunt-logo text-chemhunt-light rounded-lg">
+                            <div class="w-22 mx-1 pr-1 p-2 bg-chemhunt-logo text-chemhunt-light rounded-lg">
                                 <span id="minutes" class="font-mono leading-none" x-text="time().minutes">00</span>
                                 <div id="ch-23" class="font-mono uppercase text-sm leading-none">Minutes</div>
                             </div>
-                            <div id="ch-24" class="text-2xl text-chemhunt-logo mx-1 font-extralight">&</div>
-                            <div class="w-24 pl-1 mx-1 p-2 bg-chemhunt-logo text-chemhunt-light rounded-lg">
+                            <div id="ch-20" class="text-2xl text-chemhunt-logo mx-1 font-extralight">&</div>
+                            <div class="w-22 pl-1 mx-1 p-2 bg-chemhunt-logo text-chemhunt-light rounded-lg">
                                 <span id="seconds" class="font-mono leading-none" x-text="time().seconds">00</span>
                                 <div id="ch-25" class="font-mono uppercase text-sm leading-none">Seconds</div>
                             </div>

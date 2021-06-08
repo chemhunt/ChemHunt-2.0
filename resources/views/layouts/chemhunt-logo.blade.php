@@ -1,4 +1,4 @@
-<div class="flex items-center">
+<div class="font-caribbean flex items-center">
     <div class="flex flex-col w-full mt-8">
         <p class="text-2xl mb-5 md:text-3xl text-center text-chemhunt-logo leading-relaxed md:leading-snug">IICHE DDU SC</p>
         <p class="text-sm mb-3 md:text-base leading-snug text-chemhunt-logo text-center text-opacity-100">presents</p>

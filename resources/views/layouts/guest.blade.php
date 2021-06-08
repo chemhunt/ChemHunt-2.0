@@ -13,7 +13,7 @@
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
-    <body class="font-caribbean bg-blue-300">
+    <body class="font-sans font-bold bg-blue-300">
         <div class="antialiased">
             {{ $slot }}
             @include('layouts.footer')

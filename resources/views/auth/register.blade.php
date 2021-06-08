@@ -1,7 +1,7 @@
 <x-guest-layout>
     <div>
         @include('layouts.chemhunt-logo')
-        <div class="flex flex-col w-full mt-8">
+        <div class="font-sans font-bold flex flex-col w-full mt-8">
             <p class="text-3xl md:text-5xl my-4 text-center text-chemhunt-logo leading-relaxed md:leading-snug">Register Yourself!</p>
             <p class="text-sm md:text-base leading-snug text-chemhunt-logo text-center text-opacity-100">
                 Please register yourself for this amazing event ...

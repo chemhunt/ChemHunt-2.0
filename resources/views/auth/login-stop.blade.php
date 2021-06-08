@@ -2,10 +2,10 @@
     <div class="">
         @include('layouts.chemhunt-logo')
         <div class="flex flex-col w-full mt-8">
-            <p class="text-sm mt-8 md:text-base leading-snug text-chemhunt-logo text-center text-opacity-100">
+            <p class="text-3xl mt-8 leading-snug text-chemhunt-logo text-center text-opacity-100">
                 Sorry....
             </p>
-            <p class="text-sm mt-4 md:text-base leading-snug text-chemhunt-logo text-center text-opacity-100">
+            <p class="text-3xl mt-4 leading-snug text-chemhunt-logo text-center text-opacity-100">
                 Currently you can't login ...
             </p>
         </div>
@@ -20,7 +20,7 @@
                     </div>
 
                 </div>
-                <p class="text-3xl md:text-5xl my-4 text-center text-chemhunt-logo leading-relaxed md:leading-snug">
+                <p class="text-4xl md:text-5xl my-4 text-center text-chemhunt-logo leading-relaxed md:leading-snug">
                     <span>Today's hunt is finished or not started yet !</span>
                 </p>
             </div>

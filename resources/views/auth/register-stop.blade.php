@@ -2,11 +2,11 @@
     <div class="">
         @include('layouts.chemhunt-logo')
         <div class="flex flex-col w-full mt-8">
-            <p class="text-sm mt-8 md:text-base leading-snug text-chemhunt-logo text-center text-opacity-100">
+            <p class="text-3xl mt-8 leading-snug text-chemhunt-logo text-center text-opacity-100">
                 Sorry....
             </p>
-            <p class="text-sm mt-4 md:text-base leading-snug text-chemhunt-logo text-center text-opacity-100">
-                you are late registration process has been stopped see you next time ...
+            <p class="text-3xl mt-4 leading-snug text-chemhunt-logo text-center text-opacity-100">
+                You are late! Registration process has been stopped see you next time ...
             </p>
         </div>
         <div class="text-chemhunt-logo py-5">
