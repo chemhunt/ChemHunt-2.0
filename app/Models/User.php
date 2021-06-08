@@ -147,6 +147,10 @@ class User extends Authenticatable
         return $this->hasOne(Task::class,'user_id');
     }
 
+    public function result(){
+        return $this->hasOne(Result::class,'user_id');
+    }
+
     public function admin(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Admin::class,'admin_id')->select('id','name');

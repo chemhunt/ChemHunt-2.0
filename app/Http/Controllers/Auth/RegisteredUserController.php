@@ -63,6 +63,10 @@ class RegisteredUserController extends Controller
         $admin = Admin::all()->random();
         $user->admin()->associate($admin)->save();
 
+        $user->result()->create([
+            'day_1_r_1' => 0,
+        ]);
+
         $user->task()->create([
             'day_1' => 'Pending',
             'day_2' => 'Pending',
