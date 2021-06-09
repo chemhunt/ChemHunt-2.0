@@ -61,7 +61,9 @@
                                                 <input type="name" name="college" id="college" value="{{ old('college') }}" class="font-sans border-0 px-3 py-3 rounded text-xl shadow w-full bg-chemhunt-logo placeholder-black text-white outline-none focus:bg-chemhunt-dark" placeholder=" " style="transition: all 0.15s ease 0s;" required />
                                             </div>
                                             <div class="relative w-full mb-5">
-                                                <label class="block text-chemhunt-logo text-xl font-bold mb-2" for="college-name">Year Of Study(Completed Or Currently Study)</label>
+                                                <label class="block text-chemhunt-logo text-xl font-bold mb-2" for="college-name">
+                                                    Year
+                                                    <span class="text-base">(Currently studying in or Completed this year)</span></label>
                                                 <select id="year" name="year" class="font-sans border-0 px-3 py-3 rounded text-xl shadow w-full bg-chemhunt-logo placeholder-black text-white outline-none focus:bg-chemhunt-dark" required>
                                                     <option selected disabled>Select Year</option>
                                                     <option id="second-year" value="2">Second Year</option>
