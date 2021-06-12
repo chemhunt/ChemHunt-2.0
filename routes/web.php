@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('loaderio-877fd3f70fc8892f582b6aad582805d8/', function () {
     return 'loaderio-877fd3f70fc8892f582b6aad582805d8';
-})->name('welcome');
+})->name('loader');
 
 Route::get('/', function () {
     return view('welcome');
