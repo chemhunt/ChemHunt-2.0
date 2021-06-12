@@ -8,10 +8,10 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dk009dk/ChemHunt-2.0@master/public/css/app.css">
 
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
+        <!-- Scripts  -->
+        <script src="https://cdn.jsdelivr.net/gh/dk009dk/ChemHunt-2.0@master/public/js/app.js" defer></script>
     </head>
     <body class="font-sans font-bold bg-blue-300">
         <div class="antialiased">
