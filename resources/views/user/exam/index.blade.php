@@ -11,22 +11,18 @@
 
             <template id="timer" x-if="time().total>0">
                 <div class="sticky top-0 py-5 px-5" id="clock">
-                    <template x-if="time().total<120000">
-                        <div class="text-3xl text-center flex w-full items-center justify-center">
-                            <div class="animate-pulse mx-1 pr-1 p-2 bg-red-600 text-white rounded-lg">
-                                <span id="minutes" class="font-mono leading-none" >Time Up !</span>
-                            </div>
-                        </div>
-                    </template>
-
                     <div class="xl:text-chemhunt-light">
                         <div class="text-6xl text-center flex w-full items-center justify-center">
-                            <div class="w-22 mx-1 pr-1 p-2 bg-chemhunt-logo text-chemhunt-light rounded-lg">
+                            <div
+                                :class="{ 'bg-chemhunt-logo ': time().total>120000,'bg-red-600 animate-pulse ': time().total<120000 }"
+                                class="w-22 mx-1 pr-1 p-2 text-chemhunt-light rounded-lg">
                                 <span id="minutes" class="font-mono leading-none" x-text="time().minutes">00</span>
                                 <div id="ch-23" class="font-mono uppercase text-sm leading-none">Minutes</div>
                             </div>
                             <div id="ch-20" class="text-2xl text-chemhunt-logo mx-1 font-extralight">&</div>
-                            <div class="w-22 pl-1 mx-1 p-2 bg-chemhunt-logo text-chemhunt-light rounded-lg">
+                            <div
+                                :class="{ 'bg-chemhunt-logo ': time().total>120000,'bg-red-600 animate-pulse ': time().total<120000 }"
+                                class="w-22 pl-1 mx-1 p-2 text-chemhunt-light rounded-lg">
                                 <span id="seconds" class="font-mono leading-none" x-text="time().seconds">00</span>
                                 <div id="ch-25" class="font-mono uppercase text-sm leading-none">Seconds</div>
                             </div>
