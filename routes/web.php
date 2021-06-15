@@ -6,7 +6,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::middleware('auth')->group( function (){
+Route::middleware(['is_login','auth'])->group( function (){
     Route::get('/dashboard',[\App\Http\Controllers\Chemhunt\DashboardController::class,'show'])->name('dashboard.index');
     Route::get('/hunt',[\App\Http\Controllers\Chemhunt\ExamController::class,'show'])->name('exam.index');
     Route::post('/hunt',[\App\Http\Controllers\Chemhunt\ExamController::class,'store'])->name('exam.submit');
