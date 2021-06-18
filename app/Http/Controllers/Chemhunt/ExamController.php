@@ -11,6 +11,12 @@ use Illuminate\Http\Request;
 class ExamController extends Controller
 {
     public function show(){
+        $exam_time = now()->setHours(config('chemhunt.exam_start_hours'))->setMinutes(config('chemhunt.exam_start_minutes'))->setSeconds('00');
+        $now = now();
+        if ($now<$exam_time){
+            return redirect(route('dashboard.index'));
+        }
+
         if(config('chemhunt.exam_status')===true){
             $user = Auth::user();
             $day = config('chemhunt.day');

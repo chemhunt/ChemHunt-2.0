@@ -1,7 +1,7 @@
 <x-guest-layout>
     <div id="hunt" class="bg-blue-300">
         @include('layouts.chemhunt-logo')
-        <div x-data="timer(new Date().setHours({{ config('chemhunt.exam_hours') }},{{ config('chemhunt.exam_minutes') }},0))" x-init="init();"  class="text-chemhunt-logo">
+        <div x-data="timer(new Date().setHours({{ config('chemhunt.exam_end_hours') }},{{ config('chemhunt.exam_end_minutes') }},0))" x-init="init();"  class="text-chemhunt-logo">
             <div class="container mx-auto flex flex-col md:flex-row my-4 md:my-8">
                 <div class="flex flex-col w-full mt-5">
                     <p class="text-3xl md:text-5xl my-4 text-center text-chemhunt-logo leading-relaxed md:leading-snug">{{ 'Day '.config('chemhunt.day') }}</p>
